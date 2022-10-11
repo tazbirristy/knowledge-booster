@@ -1,7 +1,8 @@
 import React from 'react';
 
-const Topic = ({topic}) => {
+const Topic = ({topic, handleStartQuiz}) => {
     const {id,name,logo,total}=topic;
+    
     return (
     <div>
         <div className="flex flex-col transition duration-300 bg-white rounded shadow-sm hover:shadow">
@@ -19,7 +20,8 @@ const Topic = ({topic}) => {
               Topic: {name}
             </h3>
           </div>
-          <button
+          <button 
+          onClick={()=>handleStartQuiz(id)}
             className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-indigo-400 hover:bg-indigo-700 focus:shadow-outline focus:outline-none"
           >
             Start Quiz

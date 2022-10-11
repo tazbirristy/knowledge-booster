@@ -1,9 +1,14 @@
 import React, { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { TopicsContext } from './Main';
 import Topic from './Topic';
 
 const Home = () => {
     const topics=useContext(TopicsContext);
+    const navigate = useNavigate();
+    const handleStartQuiz = id =>{
+       navigate(`/topic/${id}`)
+    }
     
 
     return (
@@ -53,6 +58,7 @@ const Home = () => {
                 <Topic
                 key={topic.id}
                 topic={topic}
+                handleStartQuiz={handleStartQuiz}
                 ></Topic>
             ))
         }
