@@ -4,6 +4,14 @@ import Options from './Options';
 
 const QuizDetails = ({qs,index}) => {
     const {question,correctAnswer,options}=qs;
+    const handleCorrect=(isCorrect)=>{
+        if (correctAnswer===isCorrect){
+            alert('thik hoise,,,good job')
+        }
+        else{
+            alert('vul korso,,,very bad job')
+        }
+    }
     return (
         <div className="transition duration-300 bg-purple-100 rounded shadow-sm hover:shadow">
       <div className="flex justify-end pr-6 pt-4">
@@ -17,7 +25,7 @@ const QuizDetails = ({qs,index}) => {
         </button>
       </div>
       <h1 className="text-lg font-medium text-purple-700 mb-6">
-        Question-{index + 1}: {question.replace(/(<([^>]+)>)/gi, "")}
+        Q-{index + 1}: {question.replace(/(<([^>]+)>)/gi, "")}
       </h1>
       <div className=" max-w-md p-6 lg:max-w-screen-lg xl:max-w-screen-lg sm:mx-auto mb-7">
         {options.map((option,index) => (
@@ -25,7 +33,7 @@ const QuizDetails = ({qs,index}) => {
           key={option}
             option={option}
             index={index}
-
+            handleCorrect={handleCorrect}
             
           >
 

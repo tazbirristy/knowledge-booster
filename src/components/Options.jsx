@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Options = ({option, index}) => {
+const Options = ({option, index, handleCorrect}) => {
     return (
         <div className='text-centre bg-purple-200 p-2 m-2'>
-            <button>{index+1}. {option}</button>
+            <button onClick={()=>handleCorrect(option)}>{index+1}. {option}</button>
         </div>
     );
 };
