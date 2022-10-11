@@ -19,17 +19,15 @@ const Home = () => {
             <div className="max-w-xl mb-6">
               
               <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
-                The quick, brown fox
+              Discover a limitless
                 <br className="hidden md:block" />
-                jumps over{' '}
+                world of{' '}
                 <span className="inline-block text-purple-800">
-                  a lazy dog
+                  Learning
                 </span>
               </h2>
               <p className="text-base text-gray-700 md:text-lg">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae. explicabo.
+              Get hands-on with learning!!! Our expert-designed quizes on Web Applications will help you to test and polish your knowledge!!!! So, Why wait!!! Test your learnings now.
               </p>
             </div>
             
