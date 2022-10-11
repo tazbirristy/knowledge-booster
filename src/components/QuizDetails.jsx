@@ -15,10 +15,13 @@ const QuizDetails = ({qs,index}) => {
             toast.warning('Wrong Answer..Try to Improve!!!', {autoClose:700})
         }
     }
+    const handleShowCorrect=()=>{
+        toast.info(correctAnswer, {autoClose:2000} )
+    }
     return (
         <div className="transition duration-300 bg-purple-100 rounded shadow-sm hover:shadow">
       <div className="flex justify-end pr-6 pt-4">
-        <button>
+        <button onClick={handleShowCorrect}>
 
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"  className="w-10 h-10 text-purple-800 font-bold"
 >
