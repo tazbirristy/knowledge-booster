@@ -1,10 +1,38 @@
 import React from 'react';
+import Options from './Options';
 
-const QuizDetails = () => {
+
+const QuizDetails = ({qs,index}) => {
+    const {question,correctAnswer,options}=qs;
     return (
-        <div>
+        <div className="transition duration-300 bg-purple-100 rounded shadow-sm hover:shadow">
+      <div className="flex justify-end pr-6 pt-4">
+        <button>
+
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"  className="w-10 h-10 text-purple-800 font-bold"
+>
+  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+</svg>
+
+        </button>
+      </div>
+      <h1 className="text-lg font-medium text-purple-700 mb-6">
+        Question-{index + 1}: {question.replace(/(<([^>]+)>)/gi, "")}
+      </h1>
+      <div className=" max-w-md p-6 lg:max-w-screen-lg xl:max-w-screen-lg sm:mx-auto mb-7">
+        {options.map((option,index) => (
+          <Options
+          key={option}
+            option={option}
+            index={index}
+
             
-        </div>
+          >
+
+          </Options>
+        ))}
+      </div>
+    </div>
     );
 };
 
