@@ -1,4 +1,5 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 import Options from './Options';
 
 
@@ -6,10 +7,12 @@ const QuizDetails = ({qs,index}) => {
     const {question,correctAnswer,options}=qs;
     const handleCorrect=(isCorrect)=>{
         if (correctAnswer===isCorrect){
-            alert('thik hoise,,,good job')
+            // alert('thik hoise,,,good job')
+            toast.success('Correct Answer..Good Job!!!', {autoClose:700})
         }
         else{
-            alert('vul korso,,,very bad job')
+            // alert('vul korso,,,very bad job')
+            toast.warning('Wrong Answer..Try to Improve!!!', {autoClose:700})
         }
     }
     return (
