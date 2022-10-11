@@ -8,7 +8,7 @@ tailwind, react-js, react router, hero icons, recharts, toastify.
 
 ## Live Link
 
-Hosted in Netlify ->[Live Link]()
+Hosted in Netlify ->[Live Link](https://knowledge-booster.netlify.app/)
 
 ## Context API
 
