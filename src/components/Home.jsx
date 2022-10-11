@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { TopicsContext } from './Main';
+import Topic from './Topic';
 
 const Home = () => {
+    const topics=useContext(TopicsContext);
+    
+
     return (
+        <div>
         <div className="relative flex flex-col py-16 lg:pt-0 lg:flex-col lg:pb-0 bg-purple-300">
         <div className="flex flex-col items-start w-full max-w-xl px-4 mx-auto lg:px-8 lg:max-w-screen-xl">
           <div className="mb-16 lg:my-40 lg:max-w-lg lg:pr-5">
@@ -31,6 +37,28 @@ const Home = () => {
             alt=""
           />
         </div>
+      </div>
+      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+        
+        <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
+        
+          Check out our Quizes. Test Your Knowledge!!!
+        </h2>
+        
+      </div>
+      <div className="grid max-w-md gap-10 row-gap-5 lg:max-w-screen-lg sm:row-gap-10 lg:grid-cols-2 xl:max-w-screen-lg sm:mx-auto">
+        {
+            topics.map((topic)=>(
+                <Topic
+                key={topic.id}
+                topic={topic}
+                ></Topic>
+            ))
+        }
+        
+      </div>
+    </div>
       </div>
     );
 };
